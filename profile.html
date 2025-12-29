@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="checkLogin()">
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>Daily Goals</h2>
+    <ul>
+      <li onclick="goDashboard()">Dashboard</li>
+      <li onclick="goTasks()">My tasks</li>
+      <li class="active">Profile</li>
+      <li onclick="goSettings()">Settings</li>
+      <li onclick="logout()">Log out</li>
+    </ul>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <div class="profile-card">
+
+      <h2>Profile</h2>
+
+      <!-- PHOTO -->
+      <div class="profile-photo">
+        <img src="image.jpeg" alt="Profile">
+        <button class="outline-btn">+ Upload photo</button>
+        <p>Supported formats: jpg, png. Max size: 500kb</p>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="profile-row">
+        <label>Full name</label>
+        <input placeholder="Type your name here">
+      </div>
+
+      <!-- EMAIL -->
+      <div class="profile-row split">
+        <div>
+          <label>Email address</label>
+          <p class="email-text">john.deere@email.com</p>
+        </div>
+        <button class="outline-btn">Change email address</button>
+      </div>
+
+      <!-- ACTIONS -->
+      <div class="profile-actions">
+        <button class="outline-btn">Cancel</button>
+        <button class="yellow-btn">✔ Save changes</button>
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
