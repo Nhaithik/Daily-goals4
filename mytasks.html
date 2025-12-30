@@ -4,95 +4,38 @@
   <title>My Tasks</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<body class="dashboard-body">
 
-<body onload="checkLogin()">
+<div class="dashboard">
 
-<div class="app">
-
-  <!-- SIDEBAR -->
   <aside class="sidebar">
     <h2>Daily Goals</h2>
     <ul>
-      <li onclick="goDashboard()">Dashboard</li>
+      <li onclick="goDash()">Dashboard</li>
       <li class="active">My tasks</li>
-      <li onclick="goProfile()">Profile</li>
-      <li onclick="goSettings()">Settings</li>
+      <li>Notifications</li>
+      <li>Settings</li>
       <li onclick="logout()">Log out</li>
     </ul>
   </aside>
 
-  <!-- CONTENT -->
-  <main class="content">
+  <main class="main">
+    <h2>Today</h2>
+    <div class="card">Finish monthly reporting</div>
 
-    <!-- TOP BAR -->
-    <div class="top-bar">
-      <input class="search" placeholder="Search">
-      <div class="top-actions">
-        <button class="yellow-btn pill" onclick="openNewTask()">+ New task</button>
-        <div class="avatar">👤</div>
-      </div>
-    </div>
+    <h2>Tomorrow</h2>
+    <div class="card">Brand proposal</div>
 
-    <!-- TODAY -->
-    <div class="task-section">
-      <h3>Today</h3>
-      <div class="task-table">
-        <div class="task-row">
-          <span>Finish monthly reporting</span>
-          <span class="tag yellow">In progress</span>
-          <span class="tag high">High</span>
-          <span>Marketing 02</span>
-        </div>
-        <div class="task-row">
-          <span>Contract signing</span>
-          <span class="tag yellow">In progress</span>
-          <span class="tag medium">Medium</span>
-          <span>Operations</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- TOMORROW -->
-    <div class="task-section">
-      <h3>Tomorrow</h3>
-      <div class="task-table">
-        <div class="task-row">
-          <span>Brand proposal</span>
-          <span class="tag gray">Not started</span>
-          <span class="tag high">High</span>
-          <span>Marketing 02</span>
-        </div>
-        <div class="task-row">
-          <span>Social media review</span>
-          <span class="tag yellow">In progress</span>
-          <span class="tag medium">Medium</span>
-          <span>Operations</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- THIS WEEK -->
-    <div class="task-section">
-      <h3>This week</h3>
-      <div class="task-table">
-        <div class="task-row">
-          <span>Order check-ins</span>
-          <span class="tag yellow">In progress</span>
-          <span class="tag medium">Medium</span>
-          <span>Retails</span>
-        </div>
-        <div class="task-row">
-          <span>HR reviews</span>
-          <span class="tag gray">Not started</span>
-          <span class="tag medium">Medium</span>
-          <span>People</span>
-        </div>
-      </div>
-    </div>
-
+    <h2>This week</h2>
+    <div class="card">HR reviews</div>
   </main>
+
 </div>
 
-<script src="script.js"></script>
+<script>
+function goDash(){ location.href="dashboard.html"; }
+function logout(){ location.href="login.html"; }
+</script>
+
 </body>
 </html>
