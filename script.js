@@ -64,6 +64,14 @@ function closeTheme() {
 }
 /* ===================== THEME LOGIC ===================== */
 
+function openTheme() {
+  document.getElementById("themeModal").style.display = "block";
+}
+
+function closeTheme() {
+  document.getElementById("themeModal").style.display = "none";
+}
+
 function saveTheme() {
   const system = document.getElementById("systemTheme")?.checked;
 
@@ -94,5 +102,5 @@ function applyTheme() {
   }
 }
 
-// Apply theme on every page load
+/* APPLY ON EVERY PAGE LOAD */
 applyTheme();
