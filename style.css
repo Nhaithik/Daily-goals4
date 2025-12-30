@@ -1,90 +1,19 @@
-/* TASKS */
-.task-section {
-  margin-bottom: 30px;
-}
+body { margin:0; font-family:Arial; background:#f7f6f3; }
 
-.task-table {
-  background: white;
-  border-radius: 16px;
-  padding: 15px;
-}
+/* LOGIN */
+.login-wrapper{display:flex;height:100vh;}
+.login-image img{width:400px;}
+.login-card{margin:auto;background:#fff;padding:40px;border-radius:20px;}
 
-.task-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.task-row:last-child {
-  border-bottom: none;
-}
-
-.tag {
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  text-align: center;
-}
-
-.tag.yellow { background: #fff3b0; }
-.tag.gray { background: #eee; }
-.tag.high { background: #ffd6a5; }
-.tag.medium { background: #ffe5b4; }
-
-/* PROFILE */
-.profile-card {
-  background: white;
-  border-radius: 20px;
-  padding: 30px;
-  max-width: 900px;
-}
-
-.profile-photo {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.profile-photo img {
-  width: 120px;
-  height: 120px;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-.profile-row {
-  margin-top: 20px;
-}
-
-.profile-row input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-}
-
-.profile-row.split {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.email-text {
-  color: #666;
-}
-
-.profile-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-  margin-top: 30px;
-}
-
-.outline-btn {
-  background: white;
-  border: 1px solid #ccc;
-  padding: 10px 16px;
-  border-radius: 30px;
-  cursor: pointer;
-}
+/* DASHBOARD */
+.dashboard{display:flex;height:100vh;}
+.sidebar{width:220px;background:#fff;padding:20px;}
+.sidebar li{padding:10px;cursor:pointer;}
+.sidebar .active{background:#ffe600;border-radius:8px;}
+.main{flex:1;padding:20px;}
+.topbar{display:flex;justify-content:space-between;}
+.profile-pic{width:40px;border-radius:50%;}
+.card{background:#fff;padding:20px;border-radius:20px;margin-bottom:20px;}
+.new-task{background:#ffe600;border:none;padding:10px 20px;border-radius:20px;}
+.big-profile{width:120px;border-radius:20px;}
+.save-btn{background:#ffe600;border:none;padding:10px;border-radius:20px;}
