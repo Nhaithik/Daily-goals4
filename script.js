@@ -33,3 +33,18 @@ function openNewTask() {
   document.getElementById("newTaskForm").style.display = "block";
   window.scrollTo(0, document.body.scrollHeight);
 }
+function openNewTask() {
+  document.getElementById("taskModal").style.display = "block";
+}
+
+function closeNewTask() {
+  document.getElementById("taskModal").style.display = "none";
+}
+
+// Close when clicking outside popup
+window.onclick = function(e) {
+  const modal = document.getElementById("taskModal");
+  if (e.target === modal) {
+    closeNewTask();
+  }
+};
