@@ -178,25 +178,46 @@ body { margin:0; font-family:Arial; background:#f7f6f3; }
   gap: 10px;
   margin-top: 20px;
 }
-/* ===== DARK MODE ===== */
+/* ===================== DARK MODE ===================== */
 
 body.dark {
   background: #1f1f1f;
   color: #ffffff;
 }
 
-body.dark .sidebar,
-body.dark .main,
-body.dark .card,
-body.dark .modal-content {
+/* Sidebar */
+body.dark .sidebar {
   background: #2b2b2b;
-  color: #ffffff;
 }
 
 body.dark .sidebar li {
   color: #ffffff;
 }
 
+/* Main area */
+body.dark .main {
+  background: #1f1f1f;
+}
+
+/* Cards */
+body.dark .card {
+  background: #2b2b2b;
+  color: #ffffff;
+}
+
+/* Tables */
+body.dark table {
+  background: #2b2b2b;
+  color: #ffffff;
+}
+
+/* Modal popup */
+body.dark .modal-content {
+  background: #2b2b2b;
+  color: #ffffff;
+}
+
+/* Inputs */
 body.dark input,
 body.dark textarea,
 body.dark select {
@@ -205,14 +226,20 @@ body.dark select {
   border: 1px solid #555;
 }
 
+/* Settings list */
 body.dark .settings-list li {
   background: #2b2b2b;
+  color: #ffffff;
 }
 
+/* Buttons */
 body.dark .new-task,
 body.dark .save-btn {
   background: #ffe600;
   color: #000;
 }
 
-
+/* Close (X) button */
+body.dark .close-btn {
+  color: #ffffff;
+}
