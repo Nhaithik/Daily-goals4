@@ -63,3 +63,32 @@ body { margin:0; font-family:Arial; background:#f7f6f3; }
   height: 32px;
   border-radius: 50%;
 }
+.new-task-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 30px;
+  max-width: 700px;
+  margin-top: 30px;
+}
+
+.new-task-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.new-task-form input,
+.new-task-form textarea,
+.new-task-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.new-task-form textarea {
+  height: 80px;
+  resize: none;
+}
+
