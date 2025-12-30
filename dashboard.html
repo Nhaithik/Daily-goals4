@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dashboard - Daily Goals</title>
+  <title>Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<body class="dashboard-body">
 
-<body onload="checkLogin()">
-
-<div class="app">
+<div class="dashboard">
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
@@ -15,26 +14,23 @@
     <ul>
       <li class="active">Dashboard</li>
       <li onclick="goTasks()">My tasks</li>
-      <li onclick="goProfile()">Profile</li>
-      <li onclick="goSettings()">Settings</li>
+      <li>Notifications</li>
+      <li>Settings</li>
       <li onclick="logout()">Log out</li>
     </ul>
   </aside>
 
-  <!-- CONTENT -->
-  <main class="content">
+  <!-- MAIN -->
+  <main class="main">
 
-    <!-- TOP BAR -->
-    <div class="top-bar">
-      <input class="search" placeholder="Search">
-
-      <div class="top-actions">
-        <button class="yellow-btn pill" onclick="openNewTask()">+ New task</button>
-        <div class="avatar">👤</div>
+    <div class="topbar">
+      <input placeholder="Search">
+      <div class="top-right">
+        <button class="new-task">+ New task</button>
+        <img src="profile.png" class="profile-pic" onclick="goProfile()">
       </div>
     </div>
 
-    <!-- DASHBOARD CARDS -->
     <div class="grid">
       <div class="card">📅 Calendar</div>
       <div class="card">📋 My tasks</div>
@@ -45,46 +41,14 @@
   </main>
 </div>
 
-<!-- FULL PAGE NEW TASK (PHOTO-3) -->
-<div id="newTaskPage" class="new-task-page">
+<script>
+function goTasks(){ location.href="mytasks.html"; }
+function goProfile(){ location.href="profile.html"; }
+function logout(){
+  sessionStorage.removeItem("loggedIn");
+  location.href="login.html";
+}
+</script>
 
-  <div class="new-task-card">
-    <h2>New Task</h2>
-
-    <div class="task-field"><label>Title</label><input></div>
-    <div class="task-field"><label>Notes</label><input></div>
-    <div class="task-field"><label>URL</label><input></div>
-    <div class="task-field"><label>Due Date</label><input type="date"></div>
-
-    <div class="task-field">
-      <label>Stage</label>
-      <select>
-        <option>Not started</option>
-        <option>In progress</option>
-        <option>Completed</option>
-      </select>
-    </div>
-
-    <div class="task-field">
-      <label>Priority</label>
-      <select>
-        <option>Low</option>
-        <option>Medium</option>
-        <option>High</option>
-      </select>
-    </div>
-
-    <div class="task-field"><label>Team</label><input></div>
-    <div class="task-field"><label>Assignee</label><input></div>
-
-    <div class="task-actions">
-      <button onclick="closeNewTask()">Cancel</button>
-      <button class="yellow-btn">Create task</button>
-    </div>
-  </div>
-
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
