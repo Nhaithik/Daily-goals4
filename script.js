@@ -62,10 +62,10 @@ function openTheme() {
 function closeTheme() {
   document.getElementById("themeModal").style.display = "none";
 }
-// ===== THEME LOGIC =====
+/* ===================== THEME LOGIC ===================== */
 
 function saveTheme() {
-  const system = document.getElementById("systemTheme").checked;
+  const system = document.getElementById("systemTheme")?.checked;
 
   if (system) {
     localStorage.setItem("theme", "system");
