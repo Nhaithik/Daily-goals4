@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Tasks – Table View</title>
+  <title>My Tasks</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="dashboard-body">
 
 <div class="dashboard">
@@ -15,83 +16,60 @@
       <li onclick="location.href='dashboard.html'">Dashboard</li>
       <li class="active">My tasks</li>
       <li>Notifications</li>
-      <li>Settings</li>
       <li onclick="logout()">Log out</li>
     </ul>
   </aside>
 
-  <!-- MAIN -->
+  <!-- MAIN CONTENT -->
   <main class="main">
 
     <!-- TODAY -->
-    <div class="task-card">
-      <h3>Today</h3>
-      <table class="task-table-full">
-        <thead>
-          <tr>
-            <th>Task</th>
-            <th>Due Date</th>
-            <th>Stage</th>
-            <th>Priority</th>
-            <th>Team</th>
-            <th>Assignee</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Finish monthly reporting</td>
-            <td class="orange">Today</td>
-            <td><span class="badge progress">In progress</span></td>
-            <td><span class="badge high">High</span></td>
-            <td>Marketing 02</td>
-            <td><img src="profile.png" class="assignee"></td>
-          </tr>
+    <h3>Today</h3>
+    <table class="task-table-full">
+      <tr>
+        <th>Task</th>
+        <th>Due Date</th>
+        <th>Stage</th>
+        <th>Priority</th>
+        <th>Team</th>
+        <th>Assignee</th>
+      </tr>
 
-          <tr>
-            <td>Contract signing</td>
-            <td class="orange">Today</td>
-            <td><span class="badge progress">In progress</span></td>
-            <td><span class="badge medium">Medium</span></td>
-            <td>Operations</td>
-            <td><img src="profile.png" class="assignee"></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <tr>
+        <td>Finish monthly reporting</td>
+        <td>Today</td>
+        <td>In progress</td>
+        <td>High</td>
+        <td>Marketing 02</td>
+        <td><img src="profile.png" class="assignee"></td>
+      </tr>
+    </table>
 
     <!-- TOMORROW -->
-    <div class="task-card">
-      <h3>Tomorrow</h3>
-      <table class="task-table-full">
-        <tbody>
-          <tr>
-            <td>Brand proposal</td>
-            <td class="orange">Tomorrow</td>
-            <td><span class="badge notstarted">Not started</span></td>
-            <td><span class="badge high">High</span></td>
-            <td>Marketing 02</td>
-            <td><img src="profile.png" class="assignee"></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <h3>Tomorrow</h3>
+    <table class="task-table-full">
+      <tr>
+        <td>Brand proposal</td>
+        <td>Tomorrow</td>
+        <td>Not started</td>
+        <td>High</td>
+        <td>Marketing 02</td>
+        <td><img src="profile.png" class="assignee"></td>
+      </tr>
+    </table>
 
     <!-- THIS WEEK -->
-    <div class="task-card">
-      <h3>This week</h3>
-      <table class="task-table-full">
-        <tbody>
-          <tr>
-            <td>HR reviews</td>
-            <td>Wednesday</td>
-            <td><span class="badge notstarted">Not started</span></td>
-            <td><span class="badge medium">Medium</span></td>
-            <td>People</td>
-            <td><img src="profile.png" class="assignee"></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <h3>This week</h3>
+    <table class="task-table-full">
+      <tr>
+        <td>HR reviews</td>
+        <td>Wednesday</td>
+        <td>Not started</td>
+        <td>Medium</td>
+        <td>People</td>
+        <td><img src="profile.png" class="assignee"></td>
+      </tr>
+    </table>
 
   </main>
 </div>
