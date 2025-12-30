@@ -41,3 +41,24 @@ window.onclick = function (e) {
     closeNewTask();
   }
 };
+// SETTINGS POPUPS
+function openReminder() {
+  document.getElementById("reminderModal").style.display = "block";
+}
+function closeReminder() {
+  document.getElementById("reminderModal").style.display = "none";
+}
+
+function openGoals() {
+  document.getElementById("goalModal").style.display = "block";
+}
+function closeGoals() {
+  document.getElementById("goalModal").style.display = "none";
+}
+
+function openTheme() {
+  document.getElementById("themeModal").style.display = "block";
+}
+function closeTheme() {
+  document.getElementById("themeModal").style.display = "none";
+}
