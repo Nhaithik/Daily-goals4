@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login - Daily Goals</title>
+  <title>Login – Daily Goals</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="login-page">
 
-<div class="login-page">
+<div class="login-wrapper">
 
-  <div class="login-illustration">
-    <img src="illustration.png" alt="Daily Goals Illustration">
+  <div class="login-image">
+    <img src="illustration.png">
   </div>
 
   <div class="login-card">
     <h1>Daily Goals</h1>
-    <p class="subtitle">Simple Habit Tracker for Students</p>
+    <p>Simple Habit Tracker for Students</p>
 
     <label>Email</label>
-    <input id="email" placeholder="Your email">
+    <input type="email" id="email" placeholder="Your email">
 
     <label>Password</label>
-    <input id="password" type="password" placeholder="Your password">
+    <input type="password" id="password" placeholder="Your password">
 
-    <button class="yellow-btn full" onclick="login()">
-      Continue →
-    </button>
+    <button onclick="login()">Continue →</button>
   </div>
 
 </div>
 
-<script src="script.js"></script>
+<script>
+function login() {
+  if (
+    email.value === "admin@dailygoals.com" &&
+    password.value === "admin123"
+  ) {
+    sessionStorage.setItem("loggedIn", "true");
+    window.location.href = "dashboard.html";
+  } else {
+    alert("Invalid login");
+  }
+}
+</script>
+
 </body>
 </html>
