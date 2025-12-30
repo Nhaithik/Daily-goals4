@@ -17,3 +17,52 @@ body { margin:0; font-family:Arial; background:#f7f6f3; }
 .new-task{background:#ffe600;border:none;padding:10px 20px;border-radius:20px;}
 .big-profile{width:120px;border-radius:20px;}
 .save-btn{background:#ffe600;border:none;padding:10px;border-radius:20px;}
+/* ===== TASK TABLE PAGE (ISOLATED) ===== */
+
+.task-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.task-table-full {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-table-full th {
+  text-align: left;
+  font-size: 13px;
+  color: #888;
+  padding-bottom: 10px;
+}
+
+.task-table-full td {
+  padding: 14px 8px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+}
+
+.orange {
+  color: #f5a623;
+  font-weight: bold;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.progress { background: #ffe600; }
+.notstarted { background: #eee; }
+.high { background: #f5a623; }
+.medium { background: #f7d999; }
+
+.assignee {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
