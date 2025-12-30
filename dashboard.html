@@ -26,7 +26,7 @@
     <div class="topbar">
       <input placeholder="Search">
       <div class="top-right">
-     <button class="new-task" onclick="openNewTask()">+ New task</button>
+    <button class="new-task" onclick="openNewTask()">+ New task</button>
         <img src="profile.png" class="profile-pic" onclick="goProfile()">
       </div>
     </div>
@@ -37,39 +37,41 @@
       <div class="card">🔥 My streaks</div>
       <div class="card">📊 Activity + progress</div>
     </div>
-    <!-- NEW TASK FORM -->
-<div id="newTaskForm" class="new-task-form" style="display:none;">
+<!-- NEW TASK POPUP -->
+<div id="taskModal" class="modal">
 
-  <h2>New Task</h2>
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeNewTask()">×</span>
 
-  <input type="text" placeholder="Title">
-  <textarea placeholder="Notes"></textarea>
-  <input type="url" placeholder="URL">
-  <input type="date">
+    <h2>New Task</h2>
 
-  <select>
-    <option>Stage</option>
-    <option>Not Started</option>
-    <option>In Progress</option>
-    <option>Completed</option>
-  </select>
+    <input type="text" placeholder="Title">
+    <textarea placeholder="Notes"></textarea>
+    <input type="url" placeholder="URL">
+    <input type="date">
 
-  <select>
-    <option>Priority</option>
-    <option>High</option>
-    <option>Medium</option>
-    <option>Low</option>
-  </select>
+    <select>
+      <option>Stage</option>
+      <option>Not Started</option>
+      <option>In Progress</option>
+      <option>Completed</option>
+    </select>
 
-  <input type="text" placeholder="Team">
-  <input type="text" placeholder="Assignee">
+    <select>
+      <option>Priority</option>
+      <option>High</option>
+      <option>Medium</option>
+      <option>Low</option>
+    </select>
 
-  <button class="save-btn">Save Task</button>
+    <input type="text" placeholder="Team">
+    <input type="text" placeholder="Assignee">
+
+    <button class="save-btn">Save Task</button>
+  </div>
 
 </div>
 
-  </main>
-</div>
 
 <script>
 
