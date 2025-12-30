@@ -43,3 +43,49 @@ body { margin:0; font-family:Arial; background:#f7f6f3; }
   height: 30px;
   border-radius: 50%;
 }
+/* ===== MY TASKS TABLE ===== */
+
+.task-table-full {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.task-table-full th {
+  text-align: left;
+  padding: 14px;
+  font-size: 13px;
+  color: #777;
+  border-bottom: 1px solid #eee;
+}
+
+.task-table-full td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.orange {
+  color: #f5a623;
+  font-weight: bold;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.progress { background: #ffe600; }
+.notstarted { background: #eee; }
+.high { background: #f5a623; }
+.medium { background: #f7d999; }
+
+.assignee {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
