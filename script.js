@@ -62,3 +62,29 @@ function openTheme() {
 function closeTheme() {
   document.getElementById("themeModal").style.display = "none";
 }
+// ===== THEME LOGIC =====
+
+function saveTheme() {
+  const selectedTheme = document.querySelector(
+    'input[name="theme"]:checked'
+  );
+
+  if (!selectedTheme) return;
+
+  localStorage.setItem("theme", selectedTheme.value);
+  applyTheme();
+  closeTheme();
+}
+
+function applyTheme() {
+  const theme = localStorage.getItem("theme");
+
+  if (theme === "dark") {
+    document.body.classList.add("dark");
+  } else {
+    document.body.classList.remove("dark");
+  }
+}
+
+// Apply theme on every page load
+applyTheme();
