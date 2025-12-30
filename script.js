@@ -29,3 +29,7 @@ function logout() {
 function newTask() {
   alert("New Task feature coming next step");
 }
+function openNewTask() {
+  document.getElementById("newTaskForm").style.display = "block";
+  window.scrollTo(0, document.body.scrollHeight);
+}
