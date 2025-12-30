@@ -105,10 +105,17 @@
     <label>
       <input type="checkbox"> Match system theme
     </label>
-
+   <label>
+  <input type="radio" name="theme" value="light"> Light mode
+     </label><br>
+  
+    <label>
+  <input type="radio" name="theme" value="dark"> Dark mode
+    </label>
+ 
     <div class="modal-actions">
       <button onclick="closeTheme()">Cancel</button>
-      <button class="save-btn">Save</button>
+      <button class="save-btn" onclick="saveTheme()">Save</button>
     </div>
   </div>
 </div>
