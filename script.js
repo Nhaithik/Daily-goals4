@@ -40,6 +40,15 @@ function hide(id) {
   const el = document.getElementById(id);
   if (el) el.style.display = "none";
 }
+/* ================= NEW TASK POPUP ================= */
+
+function openNewTask() {
+  show("taskModal");
+}
+
+function closeNewTask() {
+  hide("taskModal");
+}
 
 /* ================= SETTINGS POPUPS ================= */
 
