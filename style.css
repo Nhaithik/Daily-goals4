@@ -178,5 +178,41 @@ body { margin:0; font-family:Arial; background:#f7f6f3; }
   gap: 10px;
   margin-top: 20px;
 }
+/* ===== DARK MODE ===== */
+
+body.dark {
+  background: #1f1f1f;
+  color: #ffffff;
+}
+
+body.dark .sidebar,
+body.dark .main,
+body.dark .card,
+body.dark .modal-content {
+  background: #2b2b2b;
+  color: #ffffff;
+}
+
+body.dark .sidebar li {
+  color: #ffffff;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background: #3a3a3a;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+body.dark .settings-list li {
+  background: #2b2b2b;
+}
+
+body.dark .new-task,
+body.dark .save-btn {
+  background: #ffe600;
+  color: #000;
+}
 
 
