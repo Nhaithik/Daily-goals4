@@ -1,73 +1,59 @@
-// LOGIN CHECK
+/* ================= LOGIN CHECK ================= */
+
 function checkLogin() {
   if (sessionStorage.getItem("loggedIn") !== "true") {
     window.location.href = "login.html";
   }
 }
 
-// NAVIGATION
+/* ================= NAVIGATION ================= */
+
 function goDashboard() {
   window.location.href = "dashboard.html";
 }
+
 function goTasks() {
   window.location.href = "mytasks.html";
 }
+
 function goProfile() {
   window.location.href = "profile.html";
 }
+
 function goSettings() {
   window.location.href = "settings.html";
 }
 
-// LOGOUT
 function logout() {
   sessionStorage.removeItem("loggedIn");
   window.location.href = "login.html";
 }
 
-// MODAL CONTROLS
-function openNewTask() {
-  document.getElementById("taskModal").style.display = "block";
+/* ================= SAFE POPUP HELPERS ================= */
+
+function show(id) {
+  const el = document.getElementById(id);
+  if (el) el.style.display = "block";
 }
 
-function closeNewTask() {
-  document.getElementById("taskModal").style.display = "none";
+function hide(id) {
+  const el = document.getElementById(id);
+  if (el) el.style.display = "none";
 }
 
-// Close modal when clicking outside
-window.onclick = function (e) {
-  const modal = document.getElementById("taskModal");
-  if (e.target === modal) {
-    closeNewTask();
-  }
-};
-/
+/* ================= SETTINGS POPUPS ================= */
 
-/* /* ================= SETTINGS POPUPS ================= */
+// Reminder
+function openReminder() { show("reminderModal"); }
+function closeReminder() { hide("reminderModal"); }
 
-// REMINDER
-function openReminder() {
-  document.getElementById("reminderModal").style.display = "block";
-}
-function closeReminder() {
-  document.getElementById("reminderModal").style.display = "none";
-}
+// Goals
+function openGoals() { show("goalModal"); }
+function closeGoals() { hide("goalModal"); }
 
-// GOALS
-function openGoals() {
-  document.getElementById("goalModal").style.display = "block";
-}
-function closeGoals() {
-  document.getElementById("goalModal").style.display = "none";
-}
-
-// THEME
-function openTheme() {
-  document.getElementById("themeModal").style.display = "block";
-}
-function closeTheme() {
-  document.getElementById("themeModal").style.display = "none";
-}
+// Theme
+function openTheme() { show("themeModal"); }
+function closeTheme() { hide("themeModal"); }
 
 /* ================= THEME LOGIC ================= */
 
@@ -75,7 +61,7 @@ function saveTheme() {
   const system = document.getElementById("systemTheme")?.checked;
 
   if (system) {
-    localStorage.setItem("theme", "system"); // ✅ lowercase
+    localStorage.setItem("theme", "system");
   } else {
     const selected = document.querySelector('input[name="theme"]:checked');
     if (!selected) return;
@@ -91,16 +77,14 @@ function applyTheme() {
 
   if (theme === "dark") {
     document.body.classList.add("dark");
-  } 
-  else if (theme === "light") {
+  } else if (theme === "light") {
     document.body.classList.remove("dark");
-  } 
-  else if (theme === "system") {
+  } else if (theme === "system") {
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     document.body.classList.toggle("dark", prefersDark);
   }
 }
 
-/* APPLY ON EVERY PAGE LOAD */
-applyTheme();
+/* ================= APPLY ON LOAD ================= */
 
+applyTheme();
