@@ -92,33 +92,39 @@
   </div>
 </div>
 
-<!-- ================= THEME POPUP ================= -->
+ <!-- ================= THEME POPUP ================= -->
 <div id="themeModal" class="modal">
   <div class="modal-content">
+
     <span class="close-btn" onclick="closeTheme()">×</span>
 
     <h2>Theme</h2>
 
-    <label><input type="radio" name="theme"> Light mode</label><br>
-    <label><input type="radio" name="theme"> Dark mode</label><br>
+    <!-- THEME OPTIONS -->
+    <label>
+      <input type="radio" name="theme" value="light">
+      Light mode
+    </label><br><br>
 
     <label>
-      <input type="checkbox"> Match system theme
-    </label>
-   <label>
-  <input type="radio" name="theme" value="light"> Light mode
-     </label><br>
-  
+      <input type="radio" name="theme" value="dark">
+      Dark mode
+    </label><br><br>
+
+    <!-- SYSTEM THEME -->
     <label>
-  <input type="radio" name="theme" value="dark"> Dark mode
+      <input type="checkbox" id="systemTheme">
+      Match system theme
     </label>
- 
+
     <div class="modal-actions">
       <button onclick="closeTheme()">Cancel</button>
       <button class="save-btn" onclick="saveTheme()">Save</button>
     </div>
+
   </div>
 </div>
+
 
 <script src="script.js"></script>
 </body>
