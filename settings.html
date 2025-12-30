@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Settings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-body" onload="checkLogin()">
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>Daily Goals</h2>
+    <ul>
+      <li onclick="goDashboard()">Dashboard</li>
+      <li onclick="goTasks()">My tasks</li>
+      <li class="active">Settings</li>
+      <li onclick="logout()">Log out</li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <h2>Settings</h2>
+
+    <ul class="settings-list">
+      <li onclick="openReminder()">Reminder time</li>
+      <li onclick="openGoals()">Goal preferences</li>
+      <li onclick="openTheme()">Theme (Light / Dark)</li>
+    </ul>
+
+  </main>
+</div>
+
+<!-- ================= REMINDER POPUP ================= -->
+<div id="reminderModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeReminder()">×</span>
+
+    <h2>Reminder Time</h2>
+
+    <label><input type="checkbox"> Daily reminders</label>
+
+    <h4>Time</h4>
+    <label><input type="radio" name="time"> Morning</label><br>
+    <label><input type="radio" name="time"> Afternoon</label><br>
+    <label><input type="radio" name="time"> Evening</label><br>
+
+    <label>
+      <input type="radio" name="time"> Custom
+      <input type="time">
+    </label>
+
+    <div class="modal-actions">
+      <button onclick="closeReminder()">Cancel</button>
+      <button class="save-btn">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= GOAL POPUP ================= -->
+<div id="goalModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeGoals()">×</span>
+
+    <h2>Goal Preferences</h2>
+
+    <h4>Goal Type</h4>
+    <label><input type="radio" name="goal"> Daily</label>
+    <label><input type="radio" name="goal"> Weekly</label>
+
+    <h4>Goals per day</h4>
+    <input type="number" value="3" min="1">
+
+    <label>
+      <input type="checkbox" checked> Streak tracking
+    </label>
+
+    <h4>Priority</h4>
+    <select>
+      <option>Low</option>
+      <option selected>Medium</option>
+      <option>High</option>
+    </select>
+
+    <div class="modal-actions">
+      <button onclick="closeGoals()">Cancel</button>
+      <button class="save-btn">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= THEME POPUP ================= -->
+<div id="themeModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeTheme()">×</span>
+
+    <h2>Theme</h2>
+
+    <label><input type="radio" name="theme"> Light mode</label><br>
+    <label><input type="radio" name="theme"> Dark mode</label><br>
+
+    <label>
+      <input type="checkbox"> Match system theme
+    </label>
+
+    <div class="modal-actions">
+      <button onclick="closeTheme()">Cancel</button>
+      <button class="save-btn">Save</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
