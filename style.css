@@ -17,32 +17,6 @@ body { margin:0; font-family:Arial; background:#f7f6f3; }
 .new-task{background:#ffe600;border:none;padding:10px 20px;border-radius:20px;}
 .big-profile{width:120px;border-radius:20px;}
 .save-btn{background:#ffe600;border:none;padding:10px;border-radius:20px;}
-.task-table-full {
-  width: 100%;
-  border-collapse: collapse;
-  background: white;
-  border-radius: 15px;
-  margin-bottom: 30px;
-}
-
-.task-table-full th {
-  text-align: left;
-  padding: 14px;
-  font-size: 13px;
-  color: #777;
-  border-bottom: 1px solid #eee;
-}
-
-.task-table-full td {
-  padding: 14px;
-  border-bottom: 1px solid #eee;
-}
-
-.assignee {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
 /* ===== MY TASKS TABLE ===== */
 
 .task-table-full {
