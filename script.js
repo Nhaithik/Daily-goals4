@@ -16,7 +16,7 @@ function goProfile() {
   window.location.href = "profile.html";
 }
 function goSettings() {
-  alert("Settings page coming soon");
+  window.location.href = "settings.html";
 }
 
 // LOGOUT
