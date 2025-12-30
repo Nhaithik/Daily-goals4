@@ -41,7 +41,11 @@ window.onclick = function (e) {
     closeNewTask();
   }
 };
-// SETTINGS POPUPS
+/
+
+/* /* ================= SETTINGS POPUPS ================= */
+
+// REMINDER
 function openReminder() {
   document.getElementById("reminderModal").style.display = "block";
 }
@@ -49,6 +53,7 @@ function closeReminder() {
   document.getElementById("reminderModal").style.display = "none";
 }
 
+// GOALS
 function openGoals() {
   document.getElementById("goalModal").style.display = "block";
 }
@@ -56,27 +61,21 @@ function closeGoals() {
   document.getElementById("goalModal").style.display = "none";
 }
 
+// THEME
 function openTheme() {
   document.getElementById("themeModal").style.display = "block";
 }
 function closeTheme() {
   document.getElementById("themeModal").style.display = "none";
 }
-/* ===================== THEME LOGIC ===================== */
 
-function openTheme() {
-  document.getElementById("themeModal").style.display = "block";
-}
-
-function closeTheme() {
-  document.getElementById("themeModal").style.display = "none";
-}
+/* ================= THEME LOGIC ================= */
 
 function saveTheme() {
   const system = document.getElementById("systemTheme")?.checked;
 
   if (system) {
-    localStorage.setItem("theme", "system");
+    localStorage.setItem("theme", "system"); // ✅ lowercase
   } else {
     const selected = document.querySelector('input[name="theme"]:checked');
     if (!selected) return;
@@ -104,3 +103,4 @@ function applyTheme() {
 
 /* APPLY ON EVERY PAGE LOAD */
 applyTheme();
+
