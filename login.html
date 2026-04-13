@@ -3,6 +3,17 @@
 <head>
   <title>Login – Daily Goals</title>
   <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
+        appId: "a5228543-f82a-49c9-97c4-0e3f4acf3247",
+        path: "/RedHope-4/"
+      });
+    });
+  </script>
 </head>
 <body class="login-page">
 
